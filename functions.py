@@ -30,15 +30,20 @@ function4("Hello,", "Friend")  # We can print anything we want in here
 function4(s2="Hello,", s1="Friend")  # We can determine which comes first when calling our function
 
 
-def function5(s1="default"):  # We can assign default values to parameters
+# We can assign default values to parameters
+def function5(s1="default"):
     print("{}".format(s1))
 
 
-function5()  # We don't have to mention the argument of the function here since there is already a default value.
-function5("Anything")  # We can always give it our own value even if it has a default value.
+# We don't have to mention the argument of the function here since there is already a default value.
+function5()
+# We can always give it our own value even if it has a default value.
+function5("Anything")
 
 
-def function6(s1, *more):  # In this statement, we're saying there can be one or more(unknown number) arguments.
+
+# In this statement, we're saying there can be one or more(unknown number) arguments.
+def function6(s1, *more):
     print("{} {}".format(s1, " ".join([s for s in more])))  # We turn the contents of more into a list then join them
     # back to a string with a statement. Between each element of more there will be a space.
 
@@ -47,15 +52,18 @@ function6("function 6")  # We can use just one argument
 function6("function 6", "says", "Hello,", "Friend")  # We can use as many arguments as we want
 
 
-def function7(**ks):  # This means the function needs a dictionary of arguments
+# This means the function needs a dictionary of arguments
+def function7(**ks):
     for a in ks:
         print(a, ks[a])
 
 
-function7(a="1", b="2", c="3")  # This will turn it into a dictionary.
+# This will turn it into a dictionary. and can be any len
+function7(a="1", b="2", c="3")
 
 
-def function8(s, f, i, l):  # We can have many arguments with a different .
+# We can have many arguments with a different .
+def function8(s, f, i, l):
     print(type(s))
     print(type(f))
     print(type(i))
@@ -69,8 +77,10 @@ print(v)
 
 
 def function9():
-    v = 5  # We can declare a local variable that works only in the function as well.
-    print(v)  # A globally declared variable can be used inside a function. If there is a local variable and a
+    # We can declare a local variable that works only in the function as well.
+    v = 5
+    print(v)
+    # A globally declared variable can be used inside a function. If there is a local variable and a
     # global variable with the same name, the local variable is used
 
 
@@ -79,8 +89,10 @@ print(v)
 
 
 def function10():
-    global v  # We're declaring that we're using the global v variable
-    v += 1  # If we don't declare that we're using the global v, this isn't a declaration so this would cause an error
+    # We're declaring that we're using the global v variable
+    global v
+    # If we don't declare that we're using the global v, this isn't a declaration so this would cause an error
+    v += 1
 
 
 function10()
@@ -94,13 +106,16 @@ def function12(s):
     print(s)
 
 
-function12(function11())    # Functions can call another function
+# Functions can call another function
+function12(function11())
 
 
 def function13(x):
     print(x)
-    if x > 0:   # This condition has to be here because it won't stop.
-        function13(x-1) # This is called recursion. It's recommended that you build recursion that actually stop.
+    # This condition has to be here because it won't stop.
+    if x > 0:
+        # This is called recursion. It's recommended that you build recursion that actually stop.
+        function13(x-1)
 
 
 function13(5)

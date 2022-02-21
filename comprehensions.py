@@ -26,9 +26,16 @@ print(list8)
 
 list9 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]  # This is a nested list
 
-list10 = [y for x in list9 for y in x]  # This is saying "take the lists of elements y from the nested list x and
+list10 = [y for x in list9 for y in x]
+# This is saying "take the lists of elements y from the nested list x and
 # create a new list of each y that are in x"
+# this can also be written as bellow 
+try1 = []
+for y in list9:
+    for x in y:
+        try1.append(x)
 print(list10)
+print(try1)
 
 set1 = {x + x for x in range(5)}  # This is a set comprehension
 print(set1)
