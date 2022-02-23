@@ -65,4 +65,4 @@ print(sys.modules)  # sys shows us all the modules we currently have access to
 sys.exit(0) # If nothing else along the way breaks, sys will use this code to exit the script
 
 
-# Resource (sys)[https://docs.python.org/3/library/sys.html]
+# Resource [sys](https://docs.python.org/3/library/sys.html)
