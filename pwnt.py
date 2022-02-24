@@ -77,7 +77,6 @@ print(md5sumhex(b"hello"))
 # We have access to sha1 as well. Use this with hex as it will be confusing otherwise.
 print(sha1sumhex(b"hello"))
 
-from pwn import *
 # We can print the bits for characters and strings
 print(bits(b'a'))
 # We can change bits to their corresponding characters or strings.
