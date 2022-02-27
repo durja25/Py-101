@@ -5,6 +5,14 @@ list2 = [x for x in list1]  # It iterates over each element in list1 and adds it
 # comprehension.
 print(list2)
 
+num = [12, 18, 54, 65, 87,88]
+# first define var which we are going to use iterator and then loop and then condition
+n = [i for i in num if i % 2 == 0]
+
+# changing the value itself means performing operation on var
+n = [x ** 2 for x in range(10) if x % 2 == 0]
+print(n)
+
 list3 = [x for x in list1 if x == 'a']  # We can add conditionals in list comprehensions
 print(list3)
 
@@ -29,7 +37,7 @@ list9 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]  # This is a nested list
 list10 = [y for x in list9 for y in x]
 # This is saying "take the lists of elements y from the nested list x and
 # create a new list of each y that are in x"
-# this can also be written as bellow 
+# this can also be written as bellow
 try1 = []
 for y in list9:
     for x in y:
