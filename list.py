@@ -127,3 +127,32 @@ print(list7)
 # (as long as it's applicable)
 list8 = list(map(float, list7))
 print(list8)
+
+# Combining two values
+a = ['a', 'c', 'd','b' ]
+b = [10 ,20 , 13, 18]
+
+print(list(zip(a,b)))
+
+# Combining two values and sorting them but keeping both same
+# both separete but considering it as connected
+a = ['a', 'b', 'c', 'd' ]
+b = [10 ,20 , 13, 18]
+
+print(sorted((zip(a,b))))
+
+# print as collection with for loop
+a = ['a', 'c', 'd', 'b' ]
+b = [10 ,20 , 13, 18]
+
+for i,name in zip(b,a):
+    print(f"{name} is of age {i}")
+
+# unzip
+a = [('a', 10), ('c', 20), ('d', 13), ('b', 18)]
+
+
+name,age = zip(*a)
+
+print(list(name))
+print(list(age))

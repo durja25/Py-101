@@ -9,7 +9,9 @@ print(a)
 
 
 a = 1
-while a < 5:  # This condition goes on until the exit condition is met. This is called a while loop.
+while a < 5:
+    # This condition goes on until the exit condition is met.
+    # This is called a while loop.
     a += 1
     print(a)
 

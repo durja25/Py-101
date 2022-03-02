@@ -55,3 +55,49 @@ print(dict2)
 # This is another way we can create dictionaries
 dict3 = dict()
 print(dict3)
+
+# Creating dictionary from list
+a = ['st', 'ri', 'ng']
+
+print(dict(enumerate(a)))
+
+
+# changing dict to list using zip function
+dict1 = {"a": 1, "b": 2, "c": 3}
+
+print(list(zip(*dict1)))
+
+# turning two lists into dictionary
+a = ['a', 'b', 'c', 'd' ]
+b = [10 ,20 , 13, 18]
+
+# a first as an key and b as value
+di = dict(zip(a,b))
+
+# b first as an key and a as value
+di = dict(zip(b,a))
+
+print(di)
+
+
+
+# merging dictionaries using update function
+dict1 = {"a": 1, "b": 2, "c": 3}
+dict2 = {"city": "Kolkata","country": "India"}
+
+dict1.update(dict2)
+
+# merging dictionaries using ** operator
+
+one = {**dict1,**dict2}
+
+# merging dictionaries using | union operator
+
+one = dict1 | dict2
+print(one)
+
+
+# get method in dict
+# default value if key is not there is 0
+counts = { 'quincy' : 1 , 'mrugesh' : 42, 'beau': 100, '0': 10}
+print(counts.get('kris', 0))

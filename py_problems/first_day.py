@@ -14,7 +14,11 @@ def sum_of_digits(n):
 def to_digits(n):
     # converting given no to list of digits
     n = abs(n)
-    return list(str(n))
+    return list(map(int, str(n)))
+
+# def to_digits(n):
+#     n = abs(n)
+#     return [int(x) for x in str(n)]
 
 print(to_digits(-123))
 
