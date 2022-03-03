@@ -18,9 +18,9 @@ def to_digits(n):
 
 # def to_digits(n):
 #     n = abs(n)
-#     return [int(x) for x in str(n)]
+#     return [int(l) for l in str(n)]
 
-print(to_digits(-123))
+# print(to_digits(-123))
 
 def to_number(n):
     # coverting list to number
@@ -56,7 +56,7 @@ def fibonacci_digit(n):
     else:
         return fibonacci_digit(n - 1) + fibonacci_digit(n -2)
 
-print(fibonacci_digit(10))
+# print(fibonacci_digit(10))
 
 
 def fibonacci_series(n):
@@ -107,4 +107,4 @@ def char_histogram(string):
         d[i] = keynum
     return (d)
 
-print(char_histogram("AAAAaaa!!!"))
+# print(char_histogram("AAAAaaa!!!"))
