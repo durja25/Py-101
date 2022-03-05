@@ -48,9 +48,6 @@ def get_largest_palindrome(n):
             break
     # pass
 
-
-
-
 def prime_numbers(n):
     num = [num for num in range(2,n+1)]
 
@@ -74,3 +71,19 @@ def is_anagram(a, b):
 def sum_matrix(matr):
     # Using list comprehensions
     return sum([sum(row) for row in matr])
+
+def max_char(string):
+  s = string
+  m =0
+  res = ""
+  for i in range(len(s)):
+    c = 0
+    for j in range(len(s)):
+      if s[i] == s[j]:
+        c+=1
+    if (c > m):
+      m = c
+      res = s[i]
+  return (res)
+
+# print(max_char(s))
