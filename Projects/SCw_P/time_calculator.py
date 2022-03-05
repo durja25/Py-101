@@ -60,6 +60,7 @@ def add_time(time, addhrtime,day=None):
   else:
     n == 0
 
+  added_time = f"{total_hrs}:{total_minutes} {ori_am_pm}"
   weekday = ""
   if day:
     day = day.title()
@@ -72,8 +73,7 @@ def add_time(time, addhrtime,day=None):
     else:
       index = weekdays.index(day)
       weekday = weekdays[index]
-
-  added_time = f"{total_hrs}:{total_minutes} {ori_am_pm}, {weekday}"
+    added_time += f", {weekday}"
 
   if n > 1:
     text = f" ({n} days later)"
@@ -99,12 +99,12 @@ def add_time(time, addhrtime,day=None):
 # # # Returns: 2:02 PM, Monday
 
 
-print(add_time("10:10 PM", "3:30"))
+# print(add_time("10:10 PM", "3:30"))
 # # Returns: 1:40 AM (next day)
 
 print(add_time("11:43 PM", "24:20", "tueSday"))
 # # Returns: 12:03 AM, Thursday (2 days later)
 
-print(add_time("6:30 PM", "205:12"))
+# print(add_time("6:30 PM", "205:12"))
 # # Returns: 7:42 AM (9 days later)
 
